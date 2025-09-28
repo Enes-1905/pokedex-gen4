@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .stroke { stroke:#0f172a; stroke-width:28; stroke-linecap:round; stroke-linejoin:round; }
+    </style>
+  </defs>
+  <!-- outer circle -->
+  <circle cx="512" cy="512" r="420" fill="#ffffff" class="stroke"/>
+  <!-- top half -->
+  <path d="M 92 512 A 420 420 0 0 1 932 512" fill="#ef4444" class="stroke"/>
+  <!-- center band -->
+  <line x1="92" y1="512" x2="932" y2="512" class="stroke"/>
+  <!-- center button -->
+  <circle cx="512" cy="512" r="110" fill="#ffffff" class="stroke"/>
+</svg>

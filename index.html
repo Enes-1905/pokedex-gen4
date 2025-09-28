@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex – Gen 4 </title>
+    <link rel="icon" type="img\pokeball_logo_256.png" href="img\favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="img\pokeball_logo_64.png" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body onload="init()">
+    <header class="header">
+      <div id="homeBtn" class="header-logo" title="Home (Gen 4 start)">
+        <img class="logo-img" src="img\favicon.svg" alt="Pokeball" />
+        <h1>Pokédex Gen 4</h1>
+      </div>
+      <div class="header-input">
+        <input id="searchInput" placeholder="Search name or ID…" type="text" minlength="3" />
+        <button id="searchBtn" class="btn primary" disabled>Search</button>
+      </div>
+    </header>
+
+    <main class="main-content" id="content"></main>
+
+    <!-- Toast -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading"><div class="spinner" aria-label="Loading"></div></div>
+
+    <!-- Lucario Loader (center overlay) -->
+    <div id="lucarioLoader" class="lucario-loader">
+      <div class="aura"></div>
+      <img id="lucarioImg" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png" alt="Lucario" />
+      <div class="lucario-text">Charging aura…</div>
+    </div>
+
+    <!-- Modal / Overlay -->
+    <div id="overlay" class="overlay" role="dialog" aria-modal="true">
+      <div id="modal" class="modal">
+        <div class="modal-header">
+          <div class="modal-title" id="modalTitle">Details</div>
+          <button id="closeBtn" class="icon-btn" aria-label="Close">✕</button>
+        </div>
+        <div id="modalBody" class="modal-body"></div>
+        <button id="prevBtn" class="nav-btn nav-left" aria-label="Previous">◀</button>
+        <button id="nextBtn" class="nav-btn nav-right" aria-label="Next">▶</button>
+      </div>
+    </div>
+  </body>
+</html>
